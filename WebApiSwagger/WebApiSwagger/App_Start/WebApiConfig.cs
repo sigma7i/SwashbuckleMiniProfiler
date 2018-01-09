@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web.Http;
+using WebApiSwagger.Filters;
 
 namespace WebApiSwagger
 {
@@ -13,8 +14,9 @@ namespace WebApiSwagger
 
             // Web API routes
             config.MapHttpAttributeRoutes();
+			config.Filters.Add(new WebApiProfilingActionFilter());
 
-            config.Routes.MapHttpRoute(
+			config.Routes.MapHttpRoute(
                 name: "DefaultApi",
                 routeTemplate: "api/{controller}/{id}",
                 defaults: new { id = RouteParameter.Optional }
