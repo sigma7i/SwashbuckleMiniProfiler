@@ -1,8 +1,7 @@
-﻿
-using System.ComponentModel;
+﻿using System.ComponentModel;
 using System.Configuration;
 
-namespace WebApiSwagger.Extensions
+namespace Common.Extensions
 {
 	public static class AppSettings
 	{

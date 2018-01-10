@@ -5,9 +5,9 @@ using System.Reflection;
 using System.Web;
 using System.Web.Http;
 using System.Web.Http.Description;
+using Common.Extensions;
 using Swashbuckle.Application;
 using Swashbuckle.Swagger;
-using WebApiSwagger.Extensions;
 
 [assembly: PreApplicationStartMethod(typeof(WebApiSwagger.Swagger.SwaggerConfig), "RegisterGlobal")]
 
