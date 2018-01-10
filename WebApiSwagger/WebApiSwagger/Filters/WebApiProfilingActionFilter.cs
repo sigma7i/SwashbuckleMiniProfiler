@@ -11,7 +11,7 @@ namespace WebApiSwagger.Filters
 		public override void OnActionExecuted(HttpActionExecutedContext filterContext)
 		{
 			var miniProfilerJson = JsonConvert.SerializeObject(new[] { MiniProfiler.Current.Id });
-			filterContext.Response.Content.Headers.Add(MiniProfilerResultsHeaderName, miniProfilerJson);
+			filterContext.Response?.Content.Headers.Add(MiniProfilerResultsHeaderName, miniProfilerJson);
 		}
 
 	}
