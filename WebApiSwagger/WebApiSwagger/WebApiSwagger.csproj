@@ -179,9 +179,12 @@
     <Compile Include="Areas\HelpPage\SampleGeneration\SampleDirection.cs" />
     <Compile Include="Areas\HelpPage\SampleGeneration\TextSample.cs" />
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
+    <Compile Include="Controllers\DataBaseController.cs" />
     <Compile Include="Controllers\DefaultController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
+    <Compile Include="ExceptionHandling\ClientExceptionInformation.cs" />
+    <Compile Include="ExceptionHandling\GlobalExceptionHandler.cs" />
     <Compile Include="Filters\WebApiProfilingActionFilter.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -270,6 +273,10 @@
     <ProjectReference Include="..\Common\Common.csproj">
       <Project>{BDB534CB-8F66-42B2-B35A-DFC1FB6F3949}</Project>
       <Name>Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DataAccess\DataAccess.csproj">
+      <Project>{4F254669-D0FD-4C2B-BFE2-96398C440557}</Project>
+      <Name>DataAccess</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

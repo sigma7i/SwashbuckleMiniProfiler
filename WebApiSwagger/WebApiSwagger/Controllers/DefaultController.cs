@@ -1,4 +1,6 @@
 ﻿using System.Web.Http;
+using DataAccess;
+using DataAccess.Repositories;
 using StackExchange.Profiling;
 
 namespace WebApiSwagger.Controllers
@@ -36,6 +38,14 @@ namespace WebApiSwagger.Controllers
 					Description = "I haz profiling!`"
 				});
 			}
+		}
+
+		[HttpGet, Route("GetUserList")]
+		public IHttpActionResult GetList(int page = 1, int count = 50)
+		{
+			var repo = new UsersRepository(new BiometryDbConnectionFactory());
+			var result = repo.Get(page, count);
+			return Ok(result);
 		}
 
 		[Route("notfound")]

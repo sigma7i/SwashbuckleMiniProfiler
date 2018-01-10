@@ -15,7 +15,8 @@ namespace DataAccess
 		public BiometryDbConnectionFactory()
 		{
 			_dataProvider = new SqlServerDataProvider("LinqToDB", SqlServerVersion.v2012);
-			_connectionString = AppSettings.Get<string>("LinqDbTest");
+
+			_connectionString = AppSettings.GetConnectionString("LinqDbTest");
 
 			var mappingBuilder = _dataProvider.MappingSchema.GetFluentMappingBuilder();
 			BuildMappings(mappingBuilder);

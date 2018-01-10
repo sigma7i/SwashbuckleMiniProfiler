@@ -18,5 +18,13 @@ namespace Common.Extensions
 			var converter = TypeDescriptor.GetConverter(typeof(T));
 			return (T)(converter.ConvertFromInvariantString(appSetting));
 		}
+
+		public static string GetConnectionString(string key)
+		{
+			var connectionString = ConfigurationManager.ConnectionStrings[key]?.ConnectionString;
+			if (string.IsNullOrWhiteSpace(connectionString))
+				throw new ConfigurationErrorsException($"В конфигурации отсутствует ключ: {key}");
+			return connectionString;
+		}
 	}
 }
