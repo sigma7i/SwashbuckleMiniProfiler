@@ -1,29 +1,29 @@
-using System.Web.Http;
-using Swashbuckle.Application;
-using WebActivatorEx;
-using WebApiSwagger;
+//using System.Web.Http;
+//using Swashbuckle.Application;
+//using WebActivatorEx;
+//using WebApiSwagger;
+//using WebApiSwagger.Swagger;
 
+//[assembly: PreApplicationStartMethod(typeof(WebApiSwagger.SwaggerConfig), "Register")]
 
-[assembly: PreApplicationStartMethod(typeof(SwaggerConfig), "Register")]
+//namespace WebApiSwagger
+//{
+//	public class SwaggerConfig
+//	{
+//		public static void Register()
+//		{
+//			var thisAssembly = typeof(SwaggerConfig).Assembly;
 
-namespace WebApiSwagger
-{
-	public class SwaggerConfig
-	{
-		public static void Register()
-		{
-			var thisAssembly = typeof(SwaggerConfig).Assembly;
-
-			GlobalConfiguration.Configuration
-				.EnableSwagger(c =>
-				{
-					c.SingleApiVersion("v1", "WebApiSwagger");
-					c.DocumentFilter<App_Start.InjectMiniProfiler>();
-				})
-				.EnableSwaggerUi(c =>
-				{
-					c.InjectJavaScript(thisAssembly, "WebApiSwagger.App_Start.SwaggerUiCustomization.js");
-				});
-		}
-	}
-}
+//			GlobalConfiguration.Configuration
+//				.EnableSwagger(c =>
+//				{
+//					c.SingleApiVersion("v1", "WebApiSwagger");
+//					c.DocumentFilter<InjectMiniProfiler>();
+//				})
+//				.EnableSwaggerUi(c =>
+//				{
+//					c.InjectJavaScript(thisAssembly, "WebApiSwagger.Swagger.SwaggerUiCustomization.js");
+//				});
+//		}
+//	}
+//}

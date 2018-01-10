@@ -3,9 +3,16 @@ using StackExchange.Profiling;
 
 namespace WebApiSwagger.Controllers
 {
+	/// <summary>
+	///  Описание контроллера
+	/// </summary>
 	[RoutePrefix("api/v1/default")]
 	public class DefaultController : ApiController
 	{
+		/// <summary>
+		/// Описание
+		/// </summary>
+		/// <returns></returns>
 		[Route("")]
 		public IHttpActionResult Get()
 		{
@@ -44,6 +51,9 @@ namespace WebApiSwagger.Controllers
 			return Ok();
 		}
 
+		/// <summary>
+		/// Throws Exception
+		/// </summary>
 		[Route("broken")]
 		public IHttpActionResult ThrowAnError()
 		{

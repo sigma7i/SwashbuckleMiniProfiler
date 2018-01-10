@@ -2,7 +2,7 @@
 using StackExchange.Profiling;
 using Swashbuckle.Swagger;
 
-namespace WebApiSwagger.App_Start
+namespace WebApiSwagger.Swagger
 {
 	public class InjectMiniProfiler : IDocumentFilter
 	{
