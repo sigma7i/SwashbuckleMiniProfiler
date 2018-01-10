@@ -26,6 +26,14 @@ namespace DataAccess
 
 			var mappingBuilder = _dataProvider.MappingSchema.GetFluentMappingBuilder();
 			BuildMappings(mappingBuilder);
+
+#if DEBUG
+			DataConnection.TurnTraceSwitchOn();
+			DataConnection.WriteTraceLine = (s1, s2) =>
+			{
+				log.Error(s1 + " " + s2);
+			};
+#endif
 		}
 
 		public virtual DataConnection GetDataConnection()
