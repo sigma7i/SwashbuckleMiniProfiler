@@ -21,7 +21,7 @@ namespace WebApiSwagger.Controllers
 		{
 			var repo = new UsersRepository(new BiometryDbConnectionFactory());
 			var result = repo.Get(page, count);
-			return Ok(result);
+			return Json(result);
 		}
 
 		/// <summary>
@@ -33,7 +33,7 @@ namespace WebApiSwagger.Controllers
 		{
 			var repo = new RolesRepository(new BiometryDbConnectionFactory());
 			var result = repo.Get();
-			return Ok(result);
+			return Json(result);
 		}
 	}
 }
