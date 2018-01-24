@@ -125,6 +125,7 @@ namespace WebApiSwagger.Swagger
 		public static void ConfigureSwaggerUi(SwaggerUiConfig config)
 		{
 			config.InjectJavaScript(typeof(SwaggerConfig).Assembly, "WebApiSwagger.Swagger.SwaggerUiCustomization.js");
+			config.InjectJavaScript(typeof(SwaggerConfig).Assembly, "WebApiSwagger.Swagger.SwaggerDateInput.js");
 		}
 
 		/// <summary>

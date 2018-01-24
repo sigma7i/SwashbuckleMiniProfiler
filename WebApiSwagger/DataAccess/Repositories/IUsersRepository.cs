@@ -10,6 +10,7 @@ namespace DataAccess.Repositories
 		User GetByIdentityName(string name);
 
 		int Create(User user);
+
 		int Update(User user);
 		int Lock(int userId, string reason);
 		int Unlock(int userId);
